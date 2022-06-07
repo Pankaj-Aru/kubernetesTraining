@@ -70,7 +70,10 @@ worker-dd46d7584-ncl82    1/1     Running   0          23m
 bash: delete: command not found
 [root@ip-172-31-21-49 k8s-specifications]# delete po ^C
 [root@ip-172-31-21-49 k8s-specifications]# delete po vote-94849dc97-vsbhb
-bash: delete: command not found
+bash: delete: command not found 
+[root@ip-172-31-21-49 k8s-specifications]# kubectl delete po worker-dd46d7584-ncl82
+pod "vote-94849dc97-vsbhb" deleted
+ 
 [root@ip-172-31-21-49 k8s-specifications]# kubectl delete po vote-94849dc97-vs
 pod "vote-94849dc97-vsbhb" deleted
 [root@ip-172-31-21-49 k8s-specifications]# ls
@@ -164,8 +167,8 @@ it gives all running services including result and vote app which is runnung on 
  Now deleted Voting POD
  it will create new voting POD i.e it copies Voting POD from replica set and run
  
- Now deleted Result POD
- it will create new Result POD i.e it copies Result POD from replica set and run
+ Now deleted Worker POD
+ it will create new Worker POD i.e it copies Worker POD from replica set and run 
  
   Now deleted Database POD
  it will create new Database POD i.e it copies Database POD from replica set and run
