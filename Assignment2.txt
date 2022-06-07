@@ -1,9 +1,0 @@
-Step 1: for this we will use rolling update strategy in this it will remove the old pod and at the same time add new pod so application will be avilable
-Step 2: we will patach minimum read kubectl patch deployment    kubia -p '{"spec": {"minReadySeconds": xxx}}'y seconds to the deployment
-
-Step 3:  ----$kubectl patch deployment kubia -p '{"spec": {"minReadySeconds": xxx}}'
-
-Step 4: we will perform set image command so it will update to this image in the update
-----$set image deployment xxx
-
-then it will gradually change from previous version to new version
