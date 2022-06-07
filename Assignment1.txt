@@ -1,0 +1,3 @@
+In case of single copy of pod we should use daemonSet instead of Replica Set, 
+so that the pods can be garbage collected when we delete the daemonSet and no new pod is created.
+If we want to have a single instance of pod on all nodes hen we go for daemonSet.
