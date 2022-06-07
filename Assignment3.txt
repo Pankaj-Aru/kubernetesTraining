@@ -1,0 +1,12 @@
+First we will check the port status:
+cmd: - sudo netstat -tulpn | grep LISTEN
+If the port is already listening, then we will check the services whether it is on ClusterIP or NodePort.
+thw followinf cmd will give running services
+cmd: - kubectl get svc
+If it is ClusterIP, then we will change it to NodePort using following command
+ :- kubectl edit service #servicename
+
+Even after changing the type of Service if it is not working then we have to  delete all the old pods and services and apply the replicaSet.yaml
+so that it will create the services again.
+cmd: - kubectl apply -f replicaSet.yaml
+Thereafter, we will try to run the application. If it fails to run again then the last option is to change the port in replicaSet.yaml
